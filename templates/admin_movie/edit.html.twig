@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Movie
+{% endblock %}
+
+{% block body %}
+	<h1>Edit Movie</h1>
+
+	{{ include('admin_movie/forms/_form.html.twig', {'button_label': 'Update'}) }}
+
+	<div class="d-flex flex-wrap justify-content-between mt-1">
+		<a class="btn btn-secondary" href="{{ path('app_admin_movie') }}"><i class="fa-solid fa-arrow-left"></i> Return to list</a>
+
+		{{ include('admin_movie/forms/_delete_form.html.twig') }}
+	</div>
+{% endblock %}

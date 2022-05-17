@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User profile{% endblock %}
+
+{% block body %}
+<h1>Modifier le Profil</h1>
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-success">{{ button_label|default('Enregistrer les modifications') }}</button>
+{{ form_end(form) }}
+
+<a class="btn btn-light mt-3" href="{{ path('movie_list') }}">Accueil</a>
+
+{% endblock %}
